@@ -1,0 +1,436 @@
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        /* padding and border are included in the width and height */
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    a{
+        text-decoration: none;
+    }
+    .container{
+       /* 1vh=1% de la hauteur de la fenêtre */
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+       /* CENTRER les éléments flexibles au milieu du conteneur: VERTICALE */
+        align-items: center;
+        /* centrerles éléments flexibles au centre du conteneur :horizental*/
+        justify-content: center;
+    }
+    /* Header start section */
+  
+      header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #145374;
+        color: white;
+        font-family: "Nunito", sans-serif;
+        margin: 0;
+      }
+      li {
+        list-style-type: none;
+        margin: 30px;
+        padding: 1rem;
+        font-size:15PX;
+        color: white;
+      }
+      li a{
+          color: white;
+          font-size:15PX;
+          font-weight: bold;
+      }
+      li:hover {
+        transform: scale(1.5);
+        border-bottom: 2px solid red;
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        margin-right: 2rem;
+      }
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+      .logo {
+        font-family: "Pacifico", cursive;
+        padding: 2rem;
+        font-size: 2rem;
+        color: red;
+      }
+      @media screen and (max-width: 600px) {
+        ul,
+        header {
+          flex-direction: column;
+        }
+        li {
+          text-align: center;
+        }
+      }
+      
+   
+
+    /* Header end section */
+    /* Hero section */
+    #Hero{
+        background-image: url(./image/jesus-kiteque-wn-KYaHwcis-unsplash.jpg);
+        background-size: cover;
+        background-position: bottom;
+        position: relative;
+    }
+    #Hero .Hero{
+        max-width: 1200px;
+        margin:0 auto;
+        padding: 0 50px;
+        justify-content: flex-start;
+    }
+    #Hero h1{
+        display: block;
+        /* fit-content:La quantité la plus grande entre :
+                       - La largeur intrinsèque minimum
+                       - Le minimum entre la largeur intrinsèque préférée et la largeur disponible */
+        width: fit-content;
+        position: relative;
+        font-size:4rem;
+        color:white;
+    }
+    #Hero .cta{
+        display: inline-block;
+        padding: 10px 30px;
+        color: white;
+        background-color: transparent;
+        border:2px solid crimson;
+        font-size: 2rem;
+        text-transform: uppercase ;
+        letter-spacing: 1rem;
+        margin-top:30px;
+        transition: .3s ease;
+        transition-property: background-color,color;
+    }
+    #Hero .cta:hover{
+        color:white;
+        background-color: crimson;
+        
+    
+    }
+    
+    /* Services Section Started */
+    
+    #services .services{
+        flex-direction: column;
+        
+        text-align: center;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    #services .section-title{
+        font-size: 4rem;
+        font-weight: 300;
+        color: black;
+        margin-bottom: 10px;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
+    #services .service-top p{
+        font-size: 1.4rem;
+        margin-top:5px;
+        line-height: 2.5rem;
+        font-weight: 300;
+        letter-spacing: .05rem;
+    }
+    #services .service-top{
+        width: 500px;
+        margin: 0 auto;
+    }
+    #services .service-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    #services .service-bottom p{
+        font-size: 1.4rem;
+        margin-top:5px;
+        line-height: 2.5rem;
+        font-weight: 300;
+        letter-spacing: .05rem;
+       
+    }
+    
+    #services .service-item{
+      flex-basis: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 30px;
+      margin: 10px 5%;
+      background-image: url(./image/annie-spratt-X4l3CjcDvic-unsplash.jpg);
+      background-size: cover;
+      border-radius: 10px; 
+        
+    }
+    #services .service-item h2{
+        font-size: 2rem;
+        color:white;
+        margin-bottom: 10px;
+        
+    }
+    #services .service-item p{
+        font-size: 1.4rem;
+        color:white;
+        line-height: 1.9rem;
+        text-align: left;   
+    }
+    
+    
+    
+    /* Services Section Ended */
+    
+/* Project Section started */
+    #project .section-title{
+        font-size: 4rem;
+        font-weight: 300;
+        color: black;
+        margin-bottom: 10px;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
+    #project .project{
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    #project .project-header h1{
+        margin-bottom: 50px;
+    }
+
+    #project .all-project{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    #project .project-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    #project .project-info{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: #4b5d67;
+        flex-basis: 50%;
+        height: 100%;
+
+    }
+    #project .project-info h1{
+        font-size: 3rem;
+        color:white;
+        font-weight: 500;
+        
+    }
+    #project .project-info h2{
+        font-size: 1.8rem;
+        color:white;
+        font-weight: 500;
+        scroll-margin-top: 10px;
+    }
+    #project .project-info p{
+        font-size: 1rem;
+        color:white;
+        margin-top: 10px;
+        line-height: 1.9rem;
+        
+    }
+    
+/* Project Section Ended */
+/* about Section started */
+#about .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+    background-color: transparent;
+    border:2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase ;
+    letter-spacing: 1rem;
+    margin-top:30px;
+    transition: .3s ease;
+    transition-property: background-color,color;
+}
+#about .cta:hover{
+    color:white;
+    background-color: crimson;
+    
+
+}
+#about .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#about .about{
+    display: flex;
+    flex-direction: column-reverse ;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+   
+}
+#about .col-left{
+    width: 188px;
+    height: 360px;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+    
+}
+#about .col-right p{
+ 
+    margin-bottom: 20px;
+    
+}
+#about .about-img{
+    border: 3px solid red;
+}
+
+/* about Section Ended */
+/* footer */
+#footer {
+    background-color: #145374;
+}
+#footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.brand h1{
+    font-size: 2.5rem;
+    color:white;
+
+}
+#footer h2{
+    color:white;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+#footer p{
+    color:white;
+    
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* footer end */
+/* Media Query for Tablet */
+ @media screen and (max-width: 768px) {
+    #Hero .cta {
+      
+      font-size: 2.5rem;
+      padding: 20px 60px;
+    }
+    #services .section-title, #project .section-title, #about .section-title {
+        font-size: 6rem;
+     
+    }
+    /*Hero start*/
+    #Hero h1{
+        font-size: 5rem;
+        margin: 2.5%;
+    }
+    /*Hero end*/
+    /*service start****/
+    #services .service-bottom .service-item{
+        width: 45%;
+    }
+    /******service ended************/
+    /*****About me start****/
+    #about .about{
+        flex-direction: row;
+        justify-content: baseline;
+    }
+    
+    #about .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+    /*****About me ended****/
+
+  } 
+  
+
+
+
+
+
+
+
+  /* Small screens */
+  @media screen and (min-width: 1200px) {
+    #services .service-bottom .service-item {
+        flex-basis: 22%;
+       
+      margin: 1.5%;
+
+       
+    }
+  
+  }
+  /* @media all and (max-width: 800 px) {
+    #header .nav-bar, #header .nav-list {
+        flex-direction: column;
+      
+    }
+    #header .nav-list li{
+        text-align: center;
+        
+    }
+   
+  } */
